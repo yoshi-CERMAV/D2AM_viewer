@@ -1,7 +1,8 @@
 #ifndef SAVITSKY_GOLAY_2D_H
 #define SAVITSKY_GOLAY_2D_H
 #include <fftw3.h>
-#include <Accelerate/Accelerate.h>
+#include <lapacke.h>
+#include <cblas.h>
 #include <iostream>
 using namespace std;
 

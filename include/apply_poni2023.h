@@ -10,7 +10,8 @@
 #include <detector.h>
 #include <map>
 #include <rotator.h>
-#include <Accelerate/Accelerate.h>
+#include <algorithm>
+//#include <Accelerate/Accelerate.h>
 #include <vector>
 
 typedef struct {

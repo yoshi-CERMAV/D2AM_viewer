@@ -1,6 +1,6 @@
 #include "Savitzky_Golay_2d.h"
 #include <iostream>
-
+#include <cassert>
 using namespace std;
 
 int Filter2d::alloc()
