@@ -119,6 +119,9 @@ public:
     }
     detector(const char H5[])
     {
+        mask = NULL;
+        response=NULL;
+        check = NULL;
         init(H5);
     }
     void load_mask(const char file[])
