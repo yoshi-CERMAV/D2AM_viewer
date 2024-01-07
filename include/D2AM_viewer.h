@@ -15,18 +15,9 @@
 #include "apply_poni2023.h"
 #include <Read_D5WOS.h>
 using namespace std;
-#define MAINWIN_W       700                             // main window w()
-#define MAINWIN_H       400                             // main window h()
-#define BROWSER_X       10                              // browser x()
-#define BROWSER_Y       10                              // browser y()
-#define BROWSER_W       100                             // browser w()
-#define BROWSER_H       MAINWIN_H-35                    // browser h()
-#define DATA_AREA_X      (BROWSER_W + 20)                // test area x()
-#define DATA_AREA_Y      10                              // test area y()
-#define DATA_AREA_W      (MAINWIN_W - BROWSER_W - 30)    // test area w()
-#define DATA_AREA_H      BROWSER_H                       // test area h()
 #define WOS_SIZE  600 * 1156
 #define D5_SIZE  578 * 960
+
  void clicked_D5(Fl_Widget *w, long pos);
  void clicked_WOS(Fl_Widget *w, long pos);
 class D2AM_view:public Fl_Widget{
@@ -54,7 +45,6 @@ public:
             }
         }
     }
- //   void win2img
 protected:
     int pos;
     uint8_t *data;
@@ -227,8 +217,8 @@ public:
         WOSview->callback((Fl_Callback1 *)clicked_WOS);
         cout <<"WOSCiew"<<endl;
         int view_bottom = WOSview->y()+WOSview->h();
-        int X1 =DATA_AREA_X+280;
-        int X2 =DATA_AREA_Y+600;
+        int X1 = X+280;
+        int X2 = Y+600;
         D5_Max_input =  new YN_Input(X1 , view_bottom+10,100,25, "d5max", 256);
         D5_Min_input =  new YN_Input(X1, view_bottom+40,100,25, "d5min", 0);
         WOS_Max_input =  new YN_Input(X1, view_bottom+70,100,25, "WOSmax", 256);
